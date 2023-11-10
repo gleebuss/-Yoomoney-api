@@ -10,7 +10,7 @@ class Authorize
 private:
     Authorize() = default;
 public:
-    /// Создает экзепляр класcа Authorize для получения токена
+    /// Создает экземпляр класcа Authorize для получения токена
     /// \param client_id Идентификатор приложения, полученный при регистрации
     /// \param redirect_uri URI, на который сервер OAuth передает результат авторизации
     /// \param client_secret Секретное слово для проверки подлинности приложения

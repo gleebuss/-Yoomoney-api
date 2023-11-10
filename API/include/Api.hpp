@@ -27,14 +27,14 @@ public:
         this->api_key = api_key;
     };
 
-    /// Экземляр класса Account нужен для получения информации об аккаунте
+    /// Экземпляр класса Account нужен для получения информации об аккаунте
     /// \return экзепляр класса Account
     Account account_info() {
         std::string method = "account-info";
         return Account(this->api_key, method);
     }
 
-    /// Экземляр класса Operation_history нужен для получения истории операции
+    /// Экземпляр класса Operation_history нужен для получения истории операции
     /// \param type Перечень типов операций, которые требуется отобразить
     /// \param label Отбор платежей по значению метки
     /// \param from Вывести операции от момента времени (операции, равные from, или более поздние)
@@ -49,7 +49,7 @@ public:
         return Operation_history(this->api_key, method, type, label, from, till, start_record, records);
     };
 
-    /// Экземляр класса Request_payment нужен для создания платежа
+    /// Экземпляр класса Request_payment нужен для создания платежа
     /// \param to Идентификатор получателя перевода
     /// \param amount Сумма к оплате (столько заплатит отправитель)
     /// \param comment Комментарий к переводу, отображается в истории отправителя
@@ -70,7 +70,7 @@ public:
                                label);
     };
 
-    /// Экземляр класса Process_payment нужен для подтверждения платежа
+    /// Экземпляр класса Process_payment нужен для подтверждения платежа
     /// \param request_id Идентификатор запроса, полученный из ответа метода request-payment.
     /// \return экзепляр класса Process_payment
     Process_payment process_payment(std::string request_id) {
@@ -78,7 +78,7 @@ public:
         return Process_payment(this->api_key, method, request_id);
     }
 
-    /// Экземляр класса QuickPay нужен для создания формы
+    /// Экземпляр класса QuickPay нужен для создания формы
     /// \param receiver Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей
     /// \param sum Сумма перевода (спишется с отправителя)
     /// \return экзепляр класса QuickPay

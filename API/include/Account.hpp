@@ -74,7 +74,7 @@ private:
     std::string bool_to_str(bool flag);
 
 public:
-    /// Создает экземляр класса Account для получения информации об аккаунте
+    /// Создает экземпляр класса Account для получения информации об аккаунте
     /// \param api_key API ключ для доступа к операции
     /// \param method Название метода в URL
     Account(std::string api_key, std::string method);

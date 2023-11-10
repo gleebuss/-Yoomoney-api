@@ -44,7 +44,7 @@ private:
     nlohmann::json req();
 
 public:
-    /// Создает экземляр класса Process_payment, нужен для подтверждения платежа
+    /// Создает экземпляр класса Process_payment, нужен для подтверждения платежа
     /// \param api_key API ключ для доступа к операции
     /// \param method Название метода в URL
     /// \param request_id Идентификатор запроса
