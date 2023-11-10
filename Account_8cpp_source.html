@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yoomoney Lib: Исходный файл API/src/Account.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Yoomoney Lib
+   </div>
+   <div id="projectbrief">Проект разработан Агаповым Глебом</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19ea4dbfe8f0e4681f60b9b97f7b5d11.html">API</a></li><li class="navelem"><a class="el" href="dir_72c031272133aec1d916095cf903ecf1.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Account.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Account_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Account_8hpp.html">Account.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classAccount.html#a5b50347c12de1679e3730bc6e8a756ca">    4</a></span>&#160;<a class="code" href="classAccount.html#a07cb41477c6a07deae2d131dfebd6bdc">Account::Account</a>(<span class="keyword">const</span> std::string api_key, <span class="keyword">const</span> std::string method) {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;api_key = <a class="code" href="classAccount.html#af85c057593184438a8179bf365f70adc">api_key</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;method = <a class="code" href="classAccount.html#a1c24449f2645be01c79eef061264e3b1">method</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">auto</span> data = <a class="code" href="classAccount.html#a178815aeb64101fb5e21df3db8bcb6a1">req</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span> (data.size() != 0) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        this-&gt;<a class="code" href="classAccount.html#a5632ea97da958e095e326d08a181cba8">account</a> = data[<span class="stringliteral">&quot;account&quot;</span>];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;<a class="code" href="classAccount.html#af73a467ae155367063af5fd51ab6b7e4">balance</a> = std::to_string(data[<span class="stringliteral">&quot;balance&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        this-&gt;<a class="code" href="classAccount.html#abe6a19b99d7b0238104a5618891a2e2e">currency</a> = data[<span class="stringliteral">&quot;currency&quot;</span>];</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        this-&gt;<a class="code" href="classAccount.html#a5a17fe585b4c62eb8192361699fd1435">account_status</a> = data[<span class="stringliteral">&quot;account_status&quot;</span>];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this-&gt;<a class="code" href="classAccount.html#ae50212ba656822f3c77cfdb3da7f55ae">account_type</a> = data[<span class="stringliteral">&quot;account_type&quot;</span>];</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (data.contains(<span class="stringliteral">&quot;balance_details&quot;</span>)) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;total&quot;</span>))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                this-&gt;<a class="code" href="classAccount.html#a8bad3bb3ccad3f35056a288ce4ea8e57">total</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;total&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;available&quot;</span>))</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                this-&gt;<a class="code" href="classAccount.html#acc5b6f22ddb6db7e61a81b39ae8fca03">available</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;available&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;deposition_pending&quot;</span>))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                this-&gt;<a class="code" href="classAccount.html#a3ab4d43a6914b09f4421da354b84f9fb">deposition_pending</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;deposition_pending&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;blocked&quot;</span>))</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                this-&gt;<a class="code" href="classAccount.html#a00b36e8f8e7de78fa4c901df6ca2afdb">blocked</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;blocked&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;debt&quot;</span>))</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                this-&gt;<a class="code" href="classAccount.html#ab41ab370268687a6532b05e66a639b3c">debt</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;debt&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;balance_details&quot;</span>].contains(<span class="stringliteral">&quot;hold&quot;</span>))</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                this-&gt;<a class="code" href="classAccount.html#a62220746caf2c3fa05d77e524756f65f">hold</a> = std::to_string(data[<span class="stringliteral">&quot;balance_details&quot;</span>][<span class="stringliteral">&quot;hold&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (data.contains(<span class="stringliteral">&quot;cards_linked&quot;</span>)) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classAccount_1_1Card.html">Card</a> tmp;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;cards_linked&quot;</span>].contains(<span class="stringliteral">&quot;pan_fragment&quot;</span>))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                tmp.<a class="code" href="classAccount_1_1Card.html#afb3b1cde96971582a640ab18170775ad">pan_fragment</a> = data[<span class="stringliteral">&quot;cards_linked&quot;</span>][<span class="stringliteral">&quot;pan_fragment&quot;</span>];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (data[<span class="stringliteral">&quot;cards_linked&quot;</span>].contains(<span class="stringliteral">&quot;type&quot;</span>))</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                tmp.<a class="code" href="classAccount_1_1Card.html#a33f9c949a4609ee7c33697805002907c">type</a> = data[<span class="stringliteral">&quot;cards_linked&quot;</span>][<span class="stringliteral">&quot;type&quot;</span>];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <a class="code" href="classAccount.html#a3dd3bf91cbd2bf4becc5f39918316880">cards</a>.push_back(tmp);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classAccount.html#a178815aeb64101fb5e21df3db8bcb6a1">   43</a></span>&#160;nlohmann::json <a class="code" href="classAccount.html#a178815aeb64101fb5e21df3db8bcb6a1">Account::req</a>() {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::string url = <span class="stringliteral">&quot;https://yoomoney.ru/api/&quot;</span> + <a class="code" href="classAccount.html#a1c24449f2645be01c79eef061264e3b1">method</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cpr::Response r = cpr::Get(cpr::Url{url},</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                               cpr::Bearer{this-&gt;<a class="code" href="classAccount.html#af85c057593184438a8179bf365f70adc">api_key</a>},</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                               cpr::Header{{<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/x-www-form-urlencoded&quot;</span>}});</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> nlohmann::json::parse(r.text);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classAccount.html#acb91c08736e8bfa40804f7986d9dda13">   53</a></span>&#160;std::string <a class="code" href="classAccount.html#acb91c08736e8bfa40804f7986d9dda13">Account::bool_to_str</a>(<span class="keywordtype">bool</span> flag) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> flag ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classAccount_1_1Card.html#ac9b5ecfbde09b165329f85807781614b">   57</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classAccount_1_1Card.html#ac9b5ecfbde09b165329f85807781614b">Account::Card::getPanFragment</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classAccount_1_1Card.html#afb3b1cde96971582a640ab18170775ad">pan_fragment</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classAccount_1_1Card.html#a87e37e69c0425d696b274c9c4559f12b">   61</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classAccount_1_1Card.html#a87e37e69c0425d696b274c9c4559f12b">Account::Card::getType</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="ttc" id="aAccount_8hpp_html"><div class="ttname"><a href="Account_8hpp.html">Account.hpp</a></div></div>
+<div class="ttc" id="aclassAccount_1_1Card_html"><div class="ttname"><a href="classAccount_1_1Card.html">Account::Card</a></div><div class="ttdoc">Класс для хранения информации о привязанных банковских картах</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00049">Account.hpp:49</a></div></div>
+<div class="ttc" id="aclassAccount_1_1Card_html_a33f9c949a4609ee7c33697805002907c"><div class="ttname"><a href="classAccount_1_1Card.html#a33f9c949a4609ee7c33697805002907c">Account::Card::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00060">Account.hpp:60</a></div></div>
+<div class="ttc" id="aclassAccount_1_1Card_html_a87e37e69c0425d696b274c9c4559f12b"><div class="ttname"><a href="classAccount_1_1Card.html#a87e37e69c0425d696b274c9c4559f12b">Account::Card::getType</a></div><div class="ttdeci">const std::string &amp; getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Account_8cpp_source.html#l00061">Account.cpp:61</a></div></div>
+<div class="ttc" id="aclassAccount_1_1Card_html_ac9b5ecfbde09b165329f85807781614b"><div class="ttname"><a href="classAccount_1_1Card.html#ac9b5ecfbde09b165329f85807781614b">Account::Card::getPanFragment</a></div><div class="ttdeci">const std::string &amp; getPanFragment() const</div><div class="ttdef"><b>Definition:</b> <a href="Account_8cpp_source.html#l00057">Account.cpp:57</a></div></div>
+<div class="ttc" id="aclassAccount_1_1Card_html_afb3b1cde96971582a640ab18170775ad"><div class="ttname"><a href="classAccount_1_1Card.html#afb3b1cde96971582a640ab18170775ad">Account::Card::pan_fragment</a></div><div class="ttdeci">std::string pan_fragment</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00056">Account.hpp:56</a></div></div>
+<div class="ttc" id="aclassAccount_html_a00b36e8f8e7de78fa4c901df6ca2afdb"><div class="ttname"><a href="classAccount.html#a00b36e8f8e7de78fa4c901df6ca2afdb">Account::blocked</a></div><div class="ttdeci">std::string blocked</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00042">Account.hpp:42</a></div></div>
+<div class="ttc" id="aclassAccount_html_a07cb41477c6a07deae2d131dfebd6bdc"><div class="ttname"><a href="classAccount.html#a07cb41477c6a07deae2d131dfebd6bdc">Account::Account</a></div><div class="ttdeci">Account()=default</div></div>
+<div class="ttc" id="aclassAccount_html_a178815aeb64101fb5e21df3db8bcb6a1"><div class="ttname"><a href="classAccount.html#a178815aeb64101fb5e21df3db8bcb6a1">Account::req</a></div><div class="ttdeci">nlohmann::json req()</div><div class="ttdef"><b>Definition:</b> <a href="Account_8cpp_source.html#l00043">Account.cpp:43</a></div></div>
+<div class="ttc" id="aclassAccount_html_a1c24449f2645be01c79eef061264e3b1"><div class="ttname"><a href="classAccount.html#a1c24449f2645be01c79eef061264e3b1">Account::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00016">Account.hpp:16</a></div></div>
+<div class="ttc" id="aclassAccount_html_a3ab4d43a6914b09f4421da354b84f9fb"><div class="ttname"><a href="classAccount.html#a3ab4d43a6914b09f4421da354b84f9fb">Account::deposition_pending</a></div><div class="ttdeci">std::string deposition_pending</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00041">Account.hpp:41</a></div></div>
+<div class="ttc" id="aclassAccount_html_a3dd3bf91cbd2bf4becc5f39918316880"><div class="ttname"><a href="classAccount.html#a3dd3bf91cbd2bf4becc5f39918316880">Account::cards</a></div><div class="ttdeci">std::vector&lt; Card &gt; cards</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00082">Account.hpp:82</a></div></div>
+<div class="ttc" id="aclassAccount_html_a5632ea97da958e095e326d08a181cba8"><div class="ttname"><a href="classAccount.html#a5632ea97da958e095e326d08a181cba8">Account::account</a></div><div class="ttdeci">std::string account</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00020">Account.hpp:20</a></div></div>
+<div class="ttc" id="aclassAccount_html_a5a17fe585b4c62eb8192361699fd1435"><div class="ttname"><a href="classAccount.html#a5a17fe585b4c62eb8192361699fd1435">Account::account_status</a></div><div class="ttdeci">std::string account_status</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00036">Account.hpp:36</a></div></div>
+<div class="ttc" id="aclassAccount_html_a62220746caf2c3fa05d77e524756f65f"><div class="ttname"><a href="classAccount.html#a62220746caf2c3fa05d77e524756f65f">Account::hold</a></div><div class="ttdeci">std::string hold</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00044">Account.hpp:44</a></div></div>
+<div class="ttc" id="aclassAccount_html_a8bad3bb3ccad3f35056a288ce4ea8e57"><div class="ttname"><a href="classAccount.html#a8bad3bb3ccad3f35056a288ce4ea8e57">Account::total</a></div><div class="ttdeci">std::string total</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00039">Account.hpp:39</a></div></div>
+<div class="ttc" id="aclassAccount_html_ab41ab370268687a6532b05e66a639b3c"><div class="ttname"><a href="classAccount.html#ab41ab370268687a6532b05e66a639b3c">Account::debt</a></div><div class="ttdeci">std::string debt</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00043">Account.hpp:43</a></div></div>
+<div class="ttc" id="aclassAccount_html_abe6a19b99d7b0238104a5618891a2e2e"><div class="ttname"><a href="classAccount.html#abe6a19b99d7b0238104a5618891a2e2e">Account::currency</a></div><div class="ttdeci">std::string currency</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00028">Account.hpp:28</a></div></div>
+<div class="ttc" id="aclassAccount_html_acb91c08736e8bfa40804f7986d9dda13"><div class="ttname"><a href="classAccount.html#acb91c08736e8bfa40804f7986d9dda13">Account::bool_to_str</a></div><div class="ttdeci">std::string bool_to_str(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="Account_8cpp_source.html#l00053">Account.cpp:53</a></div></div>
+<div class="ttc" id="aclassAccount_html_acc5b6f22ddb6db7e61a81b39ae8fca03"><div class="ttname"><a href="classAccount.html#acc5b6f22ddb6db7e61a81b39ae8fca03">Account::available</a></div><div class="ttdeci">std::string available</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00040">Account.hpp:40</a></div></div>
+<div class="ttc" id="aclassAccount_html_ae50212ba656822f3c77cfdb3da7f55ae"><div class="ttname"><a href="classAccount.html#ae50212ba656822f3c77cfdb3da7f55ae">Account::account_type</a></div><div class="ttdeci">std::string account_type</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00032">Account.hpp:32</a></div></div>
+<div class="ttc" id="aclassAccount_html_af73a467ae155367063af5fd51ab6b7e4"><div class="ttname"><a href="classAccount.html#af73a467ae155367063af5fd51ab6b7e4">Account::balance</a></div><div class="ttdeci">std::string balance</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00024">Account.hpp:24</a></div></div>
+<div class="ttc" id="aclassAccount_html_af85c057593184438a8179bf365f70adc"><div class="ttname"><a href="classAccount.html#af85c057593184438a8179bf365f70adc">Account::api_key</a></div><div class="ttdeci">std::string api_key</div><div class="ttdef"><b>Definition:</b> <a href="Account_8hpp_source.html#l00012">Account.hpp:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

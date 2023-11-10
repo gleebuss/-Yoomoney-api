@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yoomoney Lib: Исходный файл API/src/Process_payment.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Yoomoney Lib
+   </div>
+   <div id="projectbrief">Проект разработан Агаповым Глебом</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19ea4dbfe8f0e4681f60b9b97f7b5d11.html">API</a></li><li class="navelem"><a class="el" href="dir_72c031272133aec1d916095cf903ecf1.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Process_payment.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Process__payment_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Process__payment_8hpp.html">Process_payment.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classProcess__payment.html#ad29531c7abcfbb5216e99cd03d9a9dab">    3</a></span>&#160;<a class="code" href="classProcess__payment.html#acde1d0af126811ecf9057e7db7192741">Process_payment::Process_payment</a>(std::string api_key, std::string method,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                                 std::string request_id) {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;api_key = <a class="code" href="classProcess__payment.html#a3a7e3b8a98d4860e3f0fb2268e28bd32">api_key</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;method = <a class="code" href="classProcess__payment.html#a0fdb655bb6277864e2e6460c5f11dfe1">method</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    this-&gt;request_id = <a class="code" href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">request_id</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">auto</span> data = <a class="code" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">req</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classProcess__payment.html#a23b5888217e2827ac304879152b4bc63">status</a> = data[<span class="stringliteral">&quot;status&quot;</span>];</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classProcess__payment.html#a23b5888217e2827ac304879152b4bc63">status</a> == <span class="stringliteral">&quot;success&quot;</span>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classProcess__payment.html#a5a541d3b27eec62773cf666023edf1db">payer</a> = data[<span class="stringliteral">&quot;payer&quot;</span>];</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classProcess__payment.html#ae5dc24adb1fd3fcd030acffb2bc72597">payee</a> = data[<span class="stringliteral">&quot;payee&quot;</span>];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classProcess__payment.html#a3aeffc371b1e271b27b8750ce626f46c">balance</a> = std::to_string(data[<span class="stringliteral">&quot;balance&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classProcess__payment.html#a43cd420501026c6480adc682508e05ed">credit_amount</a> = std::to_string(data[<span class="stringliteral">&quot;credit_amount&quot;</span>].get&lt;float&gt;());</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (data.contains(<span class="stringliteral">&quot;error_description&quot;</span>))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            std::cout &lt;&lt; data[<span class="stringliteral">&quot;error_description&quot;</span>];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">throw</span> data[<span class="stringliteral">&quot;error&quot;</span>];</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">   24</a></span>&#160;nlohmann::json <a class="code" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a>() {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string url = <span class="stringliteral">&quot;https://yoomoney.ru/api/&quot;</span> + <a class="code" href="classProcess__payment.html#a0fdb655bb6277864e2e6460c5f11dfe1">method</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    cpr::Response r = cpr::Post(cpr::Url{url},</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                cpr::Bearer{this-&gt;<a class="code" href="classProcess__payment.html#a3a7e3b8a98d4860e3f0fb2268e28bd32">api_key</a>},</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                cpr::Header{{<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/x-www-form-urlencoded&quot;</span>}},</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                cpr::Payload{{<span class="stringliteral">&quot;request_id&quot;</span>, this-&gt;<a class="code" href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">request_id</a>}});</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> nlohmann::json::parse(r.text);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="aProcess__payment_8hpp_html"><div class="ttname"><a href="Process__payment_8hpp.html">Process_payment.hpp</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a0fdb655bb6277864e2e6460c5f11dfe1"><div class="ttname"><a href="classProcess__payment.html#a0fdb655bb6277864e2e6460c5f11dfe1">Process_payment::method</a></div><div class="ttdeci">std::string method</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00018">Process_payment.hpp:18</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a23b5888217e2827ac304879152b4bc63"><div class="ttname"><a href="classProcess__payment.html#a23b5888217e2827ac304879152b4bc63">Process_payment::status</a></div><div class="ttdeci">std::string status</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00026">Process_payment.hpp:26</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a3a7e3b8a98d4860e3f0fb2268e28bd32"><div class="ttname"><a href="classProcess__payment.html#a3a7e3b8a98d4860e3f0fb2268e28bd32">Process_payment::api_key</a></div><div class="ttdeci">std::string api_key</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00014">Process_payment.hpp:14</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a3aeffc371b1e271b27b8750ce626f46c"><div class="ttname"><a href="classProcess__payment.html#a3aeffc371b1e271b27b8750ce626f46c">Process_payment::balance</a></div><div class="ttdeci">std::string balance</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00030">Process_payment.hpp:30</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a43cd420501026c6480adc682508e05ed"><div class="ttname"><a href="classProcess__payment.html#a43cd420501026c6480adc682508e05ed">Process_payment::credit_amount</a></div><div class="ttdeci">std::string credit_amount</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00042">Process_payment.hpp:42</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a5a541d3b27eec62773cf666023edf1db"><div class="ttname"><a href="classProcess__payment.html#a5a541d3b27eec62773cf666023edf1db">Process_payment::payer</a></div><div class="ttdeci">std::string payer</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00034">Process_payment.hpp:34</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a7eb5534ea959671f01670afad0bd4172"><div class="ttname"><a href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a></div><div class="ttdeci">nlohmann::json req()</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8cpp_source.html#l00024">Process_payment.cpp:24</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_acde1d0af126811ecf9057e7db7192741"><div class="ttname"><a href="classProcess__payment.html#acde1d0af126811ecf9057e7db7192741">Process_payment::Process_payment</a></div><div class="ttdeci">Process_payment()=default</div></div>
+<div class="ttc" id="aclassProcess__payment_html_ae5dc24adb1fd3fcd030acffb2bc72597"><div class="ttname"><a href="classProcess__payment.html#ae5dc24adb1fd3fcd030acffb2bc72597">Process_payment::payee</a></div><div class="ttdeci">std::string payee</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00038">Process_payment.hpp:38</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_afbacff99ce5d3ad086fc170c1eba3cd6"><div class="ttname"><a href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">Process_payment::request_id</a></div><div class="ttdeci">std::string request_id</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00022">Process_payment.hpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

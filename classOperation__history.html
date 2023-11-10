@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yoomoney Lib: Класс Operation_history</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Yoomoney Lib
+   </div>
+   <div id="projectbrief">Проект разработан Агаповым Глебом</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classOperation__history-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Operation_history</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, позволяющий просматривать историю операций  
+ <a href="classOperation__history.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history_1_1Operations.html">Operations</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, позволяющий хранить и работать с операциями  <a href="classOperation__history_1_1Operations.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a7780f0e67ed8ab838048b01a81e616f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a7780f0e67ed8ab838048b01a81e616f8">Operation_history</a> (std::string <a class="el" href="classOperation__history.html#ab7e9af2542ee554ceeba37f4bf1a6f92">api_key</a>, std::string <a class="el" href="classOperation__history.html#ab61a053d1c823842b72cdb573bb103bd">method</a>, std::string <a class="el" href="classOperation__history.html#acfad91626cb9e819eb28b36d0efccf59">type</a>=&quot;&quot;, std::string <a class="el" href="classOperation__history.html#ae6a326222d113327b14f858bf6d24e17">label</a>=&quot;&quot;, std::string <a class="el" href="classOperation__history.html#a91645473b833ee99bcbcc55f8c40d330">from</a>=&quot;&quot;, std::string <a class="el" href="classOperation__history.html#a8e2f564ffff356d7c62ceb61548293fc">till</a>=&quot;&quot;, int <a class="el" href="classOperation__history.html#ad70e1523e84f92695f5de737d37058d9">start_record</a>=0, int <a class="el" href="classOperation__history.html#a919c8d7287501d468e6aea9c770622b8">records</a>=30)</td></tr>
+<tr class="separator:a7780f0e67ed8ab838048b01a81e616f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ada04f59e08762990c8bba7bf0ea51"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#ad3ada04f59e08762990c8bba7bf0ea51">getNextRecord</a> ()</td></tr>
+<tr class="separator:ad3ada04f59e08762990c8bba7bf0ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aea19ceb5d1067a31b3bd0ab74ac629"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classOperation__history_1_1Operations.html">Operations</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a9aea19ceb5d1067a31b3bd0ab74ac629">getOperations</a> () const</td></tr>
+<tr class="separator:a9aea19ceb5d1067a31b3bd0ab74ac629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a7afa4169150ae4cd0d58ead5701e2e2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a7afa4169150ae4cd0d58ead5701e2e2f">Operation_history</a> ()=default</td></tr>
+<tr class="separator:a7afa4169150ae4cd0d58ead5701e2e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6e42058c6f40eb1e3f0798ca46be64"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a4a6e42058c6f40eb1e3f0798ca46be64">req</a> ()</td></tr>
+<tr class="separator:a4a6e42058c6f40eb1e3f0798ca46be64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ab7e9af2542ee554ceeba37f4bf1a6f92"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#ab7e9af2542ee554ceeba37f4bf1a6f92">api_key</a></td></tr>
+<tr class="separator:ab7e9af2542ee554ceeba37f4bf1a6f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61a053d1c823842b72cdb573bb103bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#ab61a053d1c823842b72cdb573bb103bd">method</a></td></tr>
+<tr class="separator:ab61a053d1c823842b72cdb573bb103bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfad91626cb9e819eb28b36d0efccf59"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#acfad91626cb9e819eb28b36d0efccf59">type</a></td></tr>
+<tr class="separator:acfad91626cb9e819eb28b36d0efccf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a326222d113327b14f858bf6d24e17"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#ae6a326222d113327b14f858bf6d24e17">label</a></td></tr>
+<tr class="separator:ae6a326222d113327b14f858bf6d24e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91645473b833ee99bcbcc55f8c40d330"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a91645473b833ee99bcbcc55f8c40d330">from</a></td></tr>
+<tr class="separator:a91645473b833ee99bcbcc55f8c40d330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2f564ffff356d7c62ceb61548293fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a8e2f564ffff356d7c62ceb61548293fc">till</a></td></tr>
+<tr class="separator:a8e2f564ffff356d7c62ceb61548293fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70e1523e84f92695f5de737d37058d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#ad70e1523e84f92695f5de737d37058d9">start_record</a></td></tr>
+<tr class="separator:ad70e1523e84f92695f5de737d37058d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919c8d7287501d468e6aea9c770622b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a919c8d7287501d468e6aea9c770622b8">records</a></td></tr>
+<tr class="separator:a919c8d7287501d468e6aea9c770622b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459dc241aec37bdca26853013a2be18b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a459dc241aec37bdca26853013a2be18b">next_record</a></td></tr>
+<tr class="separator:a459dc241aec37bdca26853013a2be18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e68b06b9c6e3e1ee07bbca3aa5fc570"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classOperation__history_1_1Operations.html">Operations</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history.html#a3e68b06b9c6e3e1ee07bbca3aa5fc570">operations</a></td></tr>
+<tr class="separator:a3e68b06b9c6e3e1ee07bbca3aa5fc570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, позволяющий просматривать историю операций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00009">9</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a7afa4169150ae4cd0d58ead5701e2e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7afa4169150ae4cd0d58ead5701e2e2f">&#9670;&nbsp;</a></span>Operation_history() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::Operation_history </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7780f0e67ed8ab838048b01a81e616f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7780f0e67ed8ab838048b01a81e616f8">&#9670;&nbsp;</a></span>Operation_history() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::Operation_history </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>api_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>from</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>till</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_record</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>records</em> = <code>30</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Создает экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">api_key</td><td>API ключ для доступа </td></tr>
+    <tr><td class="paramname">method</td><td>Название метода в URL </td></tr>
+    <tr><td class="paramname">type</td><td>Перечень типов операций, которые требуется отобразить </td></tr>
+    <tr><td class="paramname">label</td><td>Отбор платежей по значению метки </td></tr>
+    <tr><td class="paramname">from</td><td>Вывести операции от момента времени (операции, равные from, или более поздние) </td></tr>
+    <tr><td class="paramname">till</td><td>Вывести операции до момента времени (операции более ранние, чем till) </td></tr>
+    <tr><td class="paramname">start_record</td><td>Порядковый номер первой записи на следующей странице истории операций </td></tr>
+    <tr><td class="paramname">records</td><td>Количество запрашиваемых записей истории операций </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8cpp_source.html">Operation_history.cpp</a> строка <a class="el" href="Operation__history_8cpp_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ad3ada04f59e08762990c8bba7bf0ea51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ada04f59e08762990c8bba7bf0ea51">&#9670;&nbsp;</a></span>getNextRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Operation_history::getNextRecord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>в виде строки Порядковый номер первой записи на следующей странице истории операций </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8cpp_source.html">Operation_history.cpp</a> строка <a class="el" href="Operation__history_8cpp_source.html#l00074">74</a></p>
+
+</div>
+</div>
+<a id="a9aea19ceb5d1067a31b3bd0ab74ac629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aea19ceb5d1067a31b3bd0ab74ac629">&#9670;&nbsp;</a></span>getOperations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classOperation__history_1_1Operations.html">Operation_history::Operations</a> &gt; Operation_history::getOperations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>вектор операций </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8cpp_source.html">Operation_history.cpp</a> строка <a class="el" href="Operation__history_8cpp_source.html#l00078">78</a></p>
+
+</div>
+</div>
+<a id="a4a6e42058c6f40eb1e3f0798ca46be64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6e42058c6f40eb1e3f0798ca46be64">&#9670;&nbsp;</a></span>req()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json Operation_history::req </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8cpp_source.html">Operation_history.cpp</a> строка <a class="el" href="Operation__history_8cpp_source.html#l00004">4</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab7e9af2542ee554ceeba37f4bf1a6f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e9af2542ee554ceeba37f4bf1a6f92">&#9670;&nbsp;</a></span>api_key</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::api_key</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ключ для получения доступа к API </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00136">136</a></p>
+
+</div>
+</div>
+<a id="a91645473b833ee99bcbcc55f8c40d330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91645473b833ee99bcbcc55f8c40d330">&#9670;&nbsp;</a></span>from</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::from</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Вывести операции от момента времени (операции, равные from, или более поздние) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00152">152</a></p>
+
+</div>
+</div>
+<a id="ae6a326222d113327b14f858bf6d24e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a326222d113327b14f858bf6d24e17">&#9670;&nbsp;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::label</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Отбор платежей по значению метки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00148">148</a></p>
+
+</div>
+</div>
+<a id="ab61a053d1c823842b72cdb573bb103bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61a053d1c823842b72cdb573bb103bd">&#9670;&nbsp;</a></span>method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::method</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Название метода для получения информации об истории операций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00140">140</a></p>
+
+</div>
+</div>
+<a id="a459dc241aec37bdca26853013a2be18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459dc241aec37bdca26853013a2be18b">&#9670;&nbsp;</a></span>next_record</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::next_record</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Порядковый номер первой записи на следующей странице истории операций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00168">168</a></p>
+
+</div>
+</div>
+<a id="a3e68b06b9c6e3e1ee07bbca3aa5fc570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e68b06b9c6e3e1ee07bbca3aa5fc570">&#9670;&nbsp;</a></span>operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Массив операций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00172">172</a></p>
+
+</div>
+</div>
+<a id="a919c8d7287501d468e6aea9c770622b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919c8d7287501d468e6aea9c770622b8">&#9670;&nbsp;</a></span>records</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::records</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Количество запрашиваемых записей истории операций </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00164">164</a></p>
+
+</div>
+</div>
+<a id="ad70e1523e84f92695f5de737d37058d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70e1523e84f92695f5de737d37058d9">&#9670;&nbsp;</a></span>start_record</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::start_record</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Начала постраничного вывода (нумерация идет с 0) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00160">160</a></p>
+
+</div>
+</div>
+<a id="a8e2f564ffff356d7c62ceb61548293fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2f564ffff356d7c62ceb61548293fc">&#9670;&nbsp;</a></span>till</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::till</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Вывести операции до момента времени (операции более ранние, чем till) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00156">156</a></p>
+
+</div>
+</div>
+<a id="acfad91626cb9e819eb28b36d0efccf59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfad91626cb9e819eb28b36d0efccf59">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Operation_history::type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Перечень типов операций, которые требуется отобразить </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00144">144</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>API/include/<a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a></li>
+<li>API/src/<a class="el" href="Operation__history_8cpp_source.html">Operation_history.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yoomoney Lib: Исходный файл API/include/QuickPay.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Yoomoney Lib
+   </div>
+   <div id="projectbrief">Проект разработан Агаповым Глебом</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_19ea4dbfe8f0e4681f60b9b97f7b5d11.html">API</a></li><li class="navelem"><a class="el" href="dir_bd61ee1abb7e4508c7906a1172c00adb.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">QuickPay.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="QuickPay_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;cpr/cpr.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classQuickPay.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuickPay.html">QuickPay</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">    8</a></span>&#160;    <a class="code" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">   12</a></span>&#160;    std::string <a class="code" href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">api_key</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">   16</a></span>&#160;    std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">   20</a></span>&#160;    std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    cpr::Url <a class="code" href="classQuickPay.html#a67efbace0ebbe3e15449432c6695bc0f">req</a>(std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                 std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay</a>(std::string <a class="code" href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">api_key</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;             std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;             std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    cpr::Url <a class="code" href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">get_url</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="ttc" id="aclassQuickPay_html"><div class="ttname"><a href="classQuickPay.html">QuickPay</a></div><div class="ttdoc">Класс, создать форму для платежа</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00006">QuickPay.hpp:6</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_a67efbace0ebbe3e15449432c6695bc0f"><div class="ttname"><a href="classQuickPay.html#a67efbace0ebbe3e15449432c6695bc0f">QuickPay::req</a></div><div class="ttdeci">cpr::Url req(std::string receiver, std::string sum)</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00016">QuickPay.cpp:16</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_a816ea7282df6e529dbc4d4b5008cb6da"><div class="ttname"><a href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">QuickPay::sum</a></div><div class="ttdeci">std::string sum</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00020">QuickPay.hpp:20</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_ab93188c9575735ef8c6ea5d7166d0128"><div class="ttname"><a href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">QuickPay::receiver</a></div><div class="ttdeci">std::string receiver</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00016">QuickPay.hpp:16</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_ad741f7dc34719dd2c51921a0e15274dd"><div class="ttname"><a href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay::QuickPay</a></div><div class="ttdeci">QuickPay()=default</div></div>
+<div class="ttc" id="aclassQuickPay_html_af2cd0f044622632f5ef7a828bd7101fe"><div class="ttname"><a href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">QuickPay::api_key</a></div><div class="ttdeci">std::string api_key</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00012">QuickPay.hpp:12</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_aff13305b878e6b22c621b6e753d9ca47"><div class="ttname"><a href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">QuickPay::get_url</a></div><div class="ttdeci">cpr::Url get_url()</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00012">QuickPay.cpp:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

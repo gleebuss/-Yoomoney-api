@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Yoomoney Lib: Класс Api</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Yoomoney Lib
+   </div>
+   <div id="projectbrief">Проект разработан Агаповым Глебом</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classApi-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Api</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, отвечающий за доступ ко всему API Yoomoney.  
+ <a href="classApi.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Api_8hpp_source.html">Api.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ab9033661036ab463a751253c24c690a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#ab9033661036ab463a751253c24c690a1">Api</a> (const std::string <a class="el" href="classApi.html#adb0a85cdcab00563a3e816fca3ad1165">api_key</a>)</td></tr>
+<tr class="separator:ab9033661036ab463a751253c24c690a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7545bfd901829d69860cc9d7ea5a2654"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAccount.html">Account</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#a7545bfd901829d69860cc9d7ea5a2654">account_info</a> ()</td></tr>
+<tr class="separator:a7545bfd901829d69860cc9d7ea5a2654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62c42282333b08b2139f8f01f243ad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classOperation__history.html">Operation_history</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#af62c42282333b08b2139f8f01f243ad3">operation_history</a> (std::string type=&quot;&quot;, std::string label=&quot;&quot;, std::string from=&quot;&quot;, std::string till=&quot;&quot;, int start_record=0, int records=30)</td></tr>
+<tr class="separator:af62c42282333b08b2139f8f01f243ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7de128e6054bacd99f68bb3ae42eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRequest__payment.html">Request_payment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#aec7de128e6054bacd99f68bb3ae42eb8">request_payment</a> (std::string to, std::string amount, std::string comment=&quot;&quot;, std::string message=&quot;&quot;, std::string label=&quot;&quot;)</td></tr>
+<tr class="separator:aec7de128e6054bacd99f68bb3ae42eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f00026f0f396eb2555bbaac0ca593d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classProcess__payment.html">Process_payment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#a06f00026f0f396eb2555bbaac0ca593d">process_payment</a> (std::string request_id)</td></tr>
+<tr class="separator:a06f00026f0f396eb2555bbaac0ca593d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47529229606e5278bed68eca18273c9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classQuickPay.html">QuickPay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#a47529229606e5278bed68eca18273c9d">form</a> (std::string receiver, std::string sum)</td></tr>
+<tr class="separator:a47529229606e5278bed68eca18273c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a484bea8c1096833cbeafb26196340cb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#a484bea8c1096833cbeafb26196340cb3">Api</a> ()=default</td></tr>
+<tr class="separator:a484bea8c1096833cbeafb26196340cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:adb0a85cdcab00563a3e816fca3ad1165"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#adb0a85cdcab00563a3e816fca3ad1165">api_key</a></td></tr>
+<tr class="separator:adb0a85cdcab00563a3e816fca3ad1165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af654370b53b7417c961a8b62adf51321"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApi.html#af654370b53b7417c961a8b62adf51321">base_url</a> = &quot;https://yoomoney.ru/api/&quot;</td></tr>
+<tr class="separator:af654370b53b7417c961a8b62adf51321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, отвечающий за доступ ко всему API Yoomoney. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00011">11</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a484bea8c1096833cbeafb26196340cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484bea8c1096833cbeafb26196340cb3">&#9670;&nbsp;</a></span>Api() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Api::Api </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9033661036ab463a751253c24c690a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9033661036ab463a751253c24c690a1">&#9670;&nbsp;</a></span>Api() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Api::Api </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>api_key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Создает объект API для дальнейшей работы </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">api_key</td><td>API ключ для доступа </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7545bfd901829d69860cc9d7ea5a2654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7545bfd901829d69860cc9d7ea5a2654">&#9670;&nbsp;</a></span>account_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAccount.html">Account</a> Api::account_info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экземпляр класса <a class="el" href="classAccount.html" title="Класc для получение информации о состоянии счета пользователя.">Account</a> нужен для получения информации об аккаунте </p><dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classAccount.html" title="Класc для получение информации о состоянии счета пользователя.">Account</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00032">32</a></p>
+
+</div>
+</div>
+<a id="a47529229606e5278bed68eca18273c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47529229606e5278bed68eca18273c9d">&#9670;&nbsp;</a></span>form()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classQuickPay.html">QuickPay</a> Api::form </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>sum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экземпляр класса <a class="el" href="classQuickPay.html" title="Класс, создать форму для платежа">QuickPay</a> нужен для создания формы </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">receiver</td><td>Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей </td></tr>
+    <tr><td class="paramname">sum</td><td>Сумма перевода (спишется с отправителя) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classQuickPay.html" title="Класс, создать форму для платежа">QuickPay</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00085">85</a></p>
+
+</div>
+</div>
+<a id="af62c42282333b08b2139f8f01f243ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af62c42282333b08b2139f8f01f243ad3">&#9670;&nbsp;</a></span>operation_history()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classOperation__history.html">Operation_history</a> Api::operation_history </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>from</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>till</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_record</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>records</em> = <code>30</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> нужен для получения истории операции </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Перечень типов операций, которые требуется отобразить </td></tr>
+    <tr><td class="paramname">label</td><td>Отбор платежей по значению метки </td></tr>
+    <tr><td class="paramname">from</td><td>Вывести операции от момента времени (операции, равные from, или более поздние) </td></tr>
+    <tr><td class="paramname">till</td><td>Вывести операции до момента времени (операции более ранние, чем till) </td></tr>
+    <tr><td class="paramname">start_record</td><td>Если параметр присутствует, то будут отображены операции, начиная с номера start_record, то есть с 0 </td></tr>
+    <tr><td class="paramname">records</td><td>Количество запрашиваемых записей истории операций </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<a id="a06f00026f0f396eb2555bbaac0ca593d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f00026f0f396eb2555bbaac0ca593d">&#9670;&nbsp;</a></span>process_payment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classProcess__payment.html">Process_payment</a> Api::process_payment </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>request_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экземпляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж">Process_payment</a> нужен для подтверждения платежа </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request_id</td><td>Идентификатор запроса, полученный из ответа метода request-payment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж">Process_payment</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00076">76</a></p>
+
+</div>
+</div>
+<a id="aec7de128e6054bacd99f68bb3ae42eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7de128e6054bacd99f68bb3ae42eb8">&#9670;&nbsp;</a></span>request_payment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRequest__payment.html">Request_payment</a> Api::request_payment </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Экземпляр класса <a class="el" href="classRequest__payment.html" title="Класс, позволяющий создать платеж">Request_payment</a> нужен для создания платежа </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to</td><td>Идентификатор получателя перевода </td></tr>
+    <tr><td class="paramname">amount</td><td>Сумма к оплате (столько заплатит отправитель) </td></tr>
+    <tr><td class="paramname">comment</td><td>Комментарий к переводу, отображается в истории отправителя </td></tr>
+    <tr><td class="paramname">message</td><td>Комментарий к переводу, отображается получателю </td></tr>
+    <tr><td class="paramname">label</td><td>Метка платежа. Необязательный параметр </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classRequest__payment.html" title="Класс, позволяющий создать платеж">Request_payment</a> </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="adb0a85cdcab00563a3e816fca3ad1165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0a85cdcab00563a3e816fca3ad1165">&#9670;&nbsp;</a></span>api_key</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Api::api_key</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Ключ для получения доступа к API </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="af654370b53b7417c961a8b62adf51321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af654370b53b7417c961a8b62adf51321">&#9670;&nbsp;</a></span>base_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Api::base_url = &quot;https://yoomoney.ru/api/&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Базовый url API </p>
+
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>API/include/<a class="el" href="Api_8hpp_source.html">Api.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
