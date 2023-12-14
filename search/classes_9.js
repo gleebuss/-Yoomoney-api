@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['request_5fpayment_145',['Request_payment',['../classRequest__payment.html',1,'']]]
+  ['quickpay_148',['QuickPay',['../classQuickPay.html',1,'']]]
 ];

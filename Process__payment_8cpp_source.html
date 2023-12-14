@@ -93,25 +93,31 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (data.contains(<span class="stringliteral">&quot;error_description&quot;</span>))</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classIllegalParams.html">IllegalParams</a>(data[<span class="stringliteral">&quot;error_description&quot;</span>]);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (data.contains(<span class="stringliteral">&quot;error&quot;</span>))</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classMoneySourceNotAvailable.html">MoneySourceNotAvailable</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">   29</a></span>&#160;nlohmann::json <a class="code" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a>()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string url = <span class="stringliteral">&quot;https://yoomoney.ru/api/&quot;</span> + <a class="code" href="classProcess__payment.html#a0fdb655bb6277864e2e6460c5f11dfe1">method</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    cpr::Response r = cpr::Post(cpr::Url{url},</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                cpr::Bearer{this-&gt;<a class="code" href="classProcess__payment.html#a3a7e3b8a98d4860e3f0fb2268e28bd32">api_key</a>},</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                cpr::Header{{<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/x-www-form-urlencoded&quot;</span>}},</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                cpr::Payload{{<span class="stringliteral">&quot;request_id&quot;</span>, this-&gt;<a class="code" href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">request_id</a>}});</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (r.status_code != 200)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classInvalidToken.html">InvalidToken</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> nlohmann::json::parse(r.text);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            std::string error = data[<span class="stringliteral">&quot;error&quot;</span>];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (error == <span class="stringliteral">&quot;technical_error&quot;</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classTechnical.html">Technical</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (error == <span class="stringliteral">&quot;money_source_not_available&quot;</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">throw</span> <a class="code" href="classMoneySourceNotAvailable.html">MoneySourceNotAvailable</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">   35</a></span>&#160;nlohmann::json <a class="code" href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a>()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string url = <span class="stringliteral">&quot;https://yoomoney.ru/api/&quot;</span> + <a class="code" href="classProcess__payment.html#a0fdb655bb6277864e2e6460c5f11dfe1">method</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    cpr::Response r = cpr::Post(cpr::Url{url},</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                cpr::Bearer{this-&gt;<a class="code" href="classProcess__payment.html#a3a7e3b8a98d4860e3f0fb2268e28bd32">api_key</a>},</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                cpr::Header{{<span class="stringliteral">&quot;Content-Type&quot;</span>, <span class="stringliteral">&quot;application/x-www-form-urlencoded&quot;</span>}},</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                cpr::Payload{{<span class="stringliteral">&quot;request_id&quot;</span>, this-&gt;<a class="code" href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">request_id</a>}});</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (r.status_code != 200)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classInvalidToken.html">InvalidToken</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> nlohmann::json::parse(r.text);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="ttc" id="aException_8hpp_html"><div class="ttname"><a href="Exception_8hpp.html">Exception.hpp</a></div></div>
 <div class="ttc" id="aProcess__payment_8hpp_html"><div class="ttname"><a href="Process__payment_8hpp.html">Process_payment.hpp</a></div></div>
 <div class="ttc" id="aclassIllegalParams_html"><div class="ttname"><a href="classIllegalParams.html">IllegalParams</a></div><div class="ttdoc">Дочерний класс от Exception. Сообщает о недопустимых значениях параметров платежа или об их отсутстви...</div><div class="ttdef"><b>Definition:</b> <a href="Exception_8hpp_source.html#l00085">Exception.hpp:86</a></div></div>
@@ -123,10 +129,11 @@ $(function() {
 <div class="ttc" id="aclassProcess__payment_html_a3aeffc371b1e271b27b8750ce626f46c"><div class="ttname"><a href="classProcess__payment.html#a3aeffc371b1e271b27b8750ce626f46c">Process_payment::balance</a></div><div class="ttdeci">std::string balance</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00030">Process_payment.hpp:30</a></div></div>
 <div class="ttc" id="aclassProcess__payment_html_a43cd420501026c6480adc682508e05ed"><div class="ttname"><a href="classProcess__payment.html#a43cd420501026c6480adc682508e05ed">Process_payment::credit_amount</a></div><div class="ttdeci">std::string credit_amount</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00042">Process_payment.hpp:42</a></div></div>
 <div class="ttc" id="aclassProcess__payment_html_a5a541d3b27eec62773cf666023edf1db"><div class="ttname"><a href="classProcess__payment.html#a5a541d3b27eec62773cf666023edf1db">Process_payment::payer</a></div><div class="ttdeci">std::string payer</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00034">Process_payment.hpp:34</a></div></div>
-<div class="ttc" id="aclassProcess__payment_html_a7eb5534ea959671f01670afad0bd4172"><div class="ttname"><a href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a></div><div class="ttdeci">nlohmann::json req()</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8cpp_source.html#l00029">Process_payment.cpp:29</a></div></div>
+<div class="ttc" id="aclassProcess__payment_html_a7eb5534ea959671f01670afad0bd4172"><div class="ttname"><a href="classProcess__payment.html#a7eb5534ea959671f01670afad0bd4172">Process_payment::req</a></div><div class="ttdeci">nlohmann::json req()</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8cpp_source.html#l00035">Process_payment.cpp:35</a></div></div>
 <div class="ttc" id="aclassProcess__payment_html_acde1d0af126811ecf9057e7db7192741"><div class="ttname"><a href="classProcess__payment.html#acde1d0af126811ecf9057e7db7192741">Process_payment::Process_payment</a></div><div class="ttdeci">Process_payment()=default</div></div>
 <div class="ttc" id="aclassProcess__payment_html_ae5dc24adb1fd3fcd030acffb2bc72597"><div class="ttname"><a href="classProcess__payment.html#ae5dc24adb1fd3fcd030acffb2bc72597">Process_payment::payee</a></div><div class="ttdeci">std::string payee</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00038">Process_payment.hpp:38</a></div></div>
 <div class="ttc" id="aclassProcess__payment_html_afbacff99ce5d3ad086fc170c1eba3cd6"><div class="ttname"><a href="classProcess__payment.html#afbacff99ce5d3ad086fc170c1eba3cd6">Process_payment::request_id</a></div><div class="ttdeci">std::string request_id</div><div class="ttdef"><b>Definition:</b> <a href="Process__payment_8hpp_source.html#l00022">Process_payment.hpp:22</a></div></div>
+<div class="ttc" id="aclassTechnical_html"><div class="ttname"><a href="classTechnical.html">Technical</a></div><div class="ttdoc">Дочерний класс от Exception. Сообщает о технических проблемах.</div><div class="ttdef"><b>Definition:</b> <a href="Exception_8hpp_source.html#l00077">Exception.hpp:78</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
