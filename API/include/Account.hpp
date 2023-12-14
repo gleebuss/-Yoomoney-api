@@ -1,41 +1,41 @@
 #include "cpr/cpr.h"
 #include "dependencies/json.hpp"
 
-
 /// \class Account
 /// \brief Класc для получение информации о состоянии счета пользователя.
 ///
-class Account {
+class Account
+{
 private:
-    ///Ключ для получения доступа к API
-    /// \var api_key
+    /// Ключ для получения доступа к API
+    ///  \var api_key
     std::string api_key;
 
-    ///Название метода для получения информации о состоянии счета пользователя
-    /// \var method
+    /// Название метода для получения информации о состоянии счета пользователя
+    ///  \var method
     std::string method;
 
-    ///Номер счета пользователя.
-    /// \var account
+    /// Номер счета пользователя.
+    ///  \var account
     std::string account;
 
-    ///Баланс счета пользователя.
-    /// \var balance
+    /// Баланс счета пользователя.
+    ///  \var balance
     std::string balance;
 
-    ///Код валюты счета пользователя по стандарту ISO 4217
-    /// \var currency
+    /// Код валюты счета пользователя по стандарту ISO 4217
+    ///  \var currency
     std::string currency;
 
-    ///Тип счета пользователя
-    /// \var account_type
+    /// Тип счета пользователя
+    ///  \var account_type
     std::string account_type;
 
-    ///Статус пользователя
-    /// \var account_status
+    /// Статус пользователя
+    ///  \var account_status
     std::string account_status;
 
-    //Параметры объекта balance_details
+    // Параметры объекта balance_details
     std::string total;
     std::string available;
     std::string deposition_pending;
@@ -46,11 +46,11 @@ private:
     /// \class Card
     /// \brief Класс для хранения информации о привязанных банковских картах
     ///
-    class Card {
+    class Card
+    {
         friend class Account;
 
     private:
-
         /// Маскированный номер карты
         /// \var pan_fragment
         std::string pan_fragment;

@@ -9,6 +9,7 @@ class Authorize
 {
 private:
     Authorize() = default;
+
 public:
     /// Создает экземпляр класcа Authorize для получения токена
     /// \param client_id Идентификатор приложения, полученный при регистрации

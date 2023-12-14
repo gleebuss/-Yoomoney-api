@@ -4,18 +4,18 @@
 #include "Request_payment.hpp"
 #include "Process_payment.hpp"
 
-
 /// \class Api
 /// \brief Класс, отвечающий за доступ ко всему API Yoomoney.
 ///
-class Api {
+class Api
+{
 private:
-    ///Ключ для получения доступа к API
-    /// \var api_key
+    /// Ключ для получения доступа к API
+    ///  \var api_key
     std::string api_key;
 
-    ///Базовый url API
-    /// \var base_url
+    /// Базовый url API
+    ///  \var base_url
     const std::string base_url = "https://yoomoney.ru/api/";
 
     Api() = default;
@@ -23,13 +23,15 @@ private:
 public:
     /// Создает объект API для дальнейшей работы
     /// \param api_key API ключ для доступа
-    Api(const std::string api_key) {
+    Api(const std::string api_key)
+    {
         this->api_key = api_key;
     };
 
     /// Экземпляр класса Account нужен для получения информации об аккаунте
     /// \return экзепляр класса Account
-    Account account_info() {
+    Account account_info()
+    {
         std::string method = "account-info";
         return Account(this->api_key, method);
     }
@@ -44,7 +46,8 @@ public:
     /// \return экзепляр класса Operation_history
     Operation_history operation_history(std::string type = "",
                                         std::string label = "", std::string from = "", std::string till = "",
-                                        int start_record = 0, int records = 30) {
+                                        long start_record = 0, long records = 30)
+    {
         std::string method = "operation-history";
         return Operation_history(this->api_key, method, type, label, from, till, start_record, records);
     };
@@ -60,7 +63,8 @@ public:
                                     std::string amount,
                                     std::string comment = "",
                                     std::string message = "",
-                                    std::string label = "") {
+                                    std::string label = "")
+    {
         std::string method = "request-payment";
         return Request_payment(this->api_key, method,
                                to,
@@ -73,7 +77,8 @@ public:
     /// Экземпляр класса Process_payment нужен для подтверждения платежа
     /// \param request_id Идентификатор запроса, полученный из ответа метода request-payment.
     /// \return экзепляр класса Process_payment
-    Process_payment process_payment(std::string request_id) {
+    Process_payment process_payment(std::string request_id)
+    {
         std::string method = "process-payment";
         return Process_payment(this->api_key, method, request_id);
     }
@@ -83,7 +88,8 @@ public:
     /// \param sum Сумма перевода (спишется с отправителя)
     /// \return экзепляр класса QuickPay
     QuickPay form(std::string receiver,
-                  std::string sum) {
+                  std::string sum)
+    {
         return QuickPay(this->api_key, receiver, sum);
     };
 };

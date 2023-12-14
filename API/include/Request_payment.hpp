@@ -1,19 +1,19 @@
 #include "cpr/cpr.h"
 #include "dependencies/json.hpp"
 
-
 /// \class Request_payment
 /// \brief Класс, позволяющий создать платеж
-class Request_payment {
+class Request_payment
+{
 private:
     Request_payment() = default;
 
-    ///Ключ для получения доступа к API
-    /// \var api_key
+    /// Ключ для получения доступа к API
+    ///  \var api_key
     std::string api_key;
 
-    ///Название метода для создания платежа
-    /// \var method
+    /// Название метода для создания платежа
+    ///  \var method
     std::string method;
 
     /// Код результата выполнения операции
@@ -40,8 +40,7 @@ private:
                        std::string amount,
                        std::string comment,
                        std::string message,
-                       std::string label
-    );
+                       std::string label);
 
 public:
     /// Создает экземпляр класса Request_payment, нужен для создания платежа
@@ -57,37 +56,40 @@ public:
                     std::string amount,
                     std::string comment,
                     std::string message,
-                    std::string label
-    );
+                    std::string label);
 
     ///
     /// \return код результата выполнения операции
-    std::string get_status() {
+    std::string get_status()
+    {
         return status;
     };
 
     /// Идентификатор запроса платежа
     /// \return
-    std::string get_request_id() {
+    std::string get_request_id()
+    {
         return request_id;
     };
 
     ///
     /// \return код ошибки при проведении платежа
-    std::string get_error() {
+    std::string get_error()
+    {
         return error;
     };
 
     ///
     /// \return сумму к списанию со счета в валюте счета плательщика (столько заплатит пользователь вместе с комиссией).
-    std::string get_contract_amount() {
+    std::string get_contract_amount()
+    {
         return contract_amount;
     };
 
     /// текущий баланс счета пользователя
     /// \return
-    std::string get_balance() {
+    std::string get_balance()
+    {
         return balance;
     };
-
 };

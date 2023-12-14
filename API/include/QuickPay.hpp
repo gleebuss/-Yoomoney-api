@@ -1,9 +1,9 @@
 #include "cpr/cpr.h"
 
-
 /// \class QuickPay
 /// \brief Класс, создать форму для платежа
-class QuickPay {
+class QuickPay
+{
 private:
     QuickPay() = default;
 
@@ -21,7 +21,6 @@ private:
 
     cpr::Url req(std::string receiver,
                  std::string sum);
-
 
 public:
     /// Создает экземпляр класса QuickPay для получения URL формы

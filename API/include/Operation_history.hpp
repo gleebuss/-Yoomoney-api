@@ -6,12 +6,13 @@
 /// \class Operation_history
 /// \brief Класс, позволяющий просматривать историю операций
 
-class Operation_history {
+class Operation_history
+{
 private:
-
     /// \class Operations
     /// \brief Класс, позволяющий хранить и работать с операциями
-    class Operations {
+    class Operations
+    {
         friend class Operation_history;
 
     private:
@@ -63,8 +64,8 @@ private:
         /// \var sender
         std::string sender;
 
-        ///Статус платежа (перевода)
-        /// \var recipient
+        /// Статус платежа (перевода)
+        ///  \var recipient
         std::string recipient;
 
         /// Идентификатор получателя перевода. Присутствует для исходящих переводов другим пользователям
@@ -72,8 +73,8 @@ private:
         std::string recipient_type;
 
         Operations() = default;
-    public:
 
+    public:
         ///
         /// \return id операции
         const std::string &getOperationId() const;
@@ -131,12 +132,12 @@ private:
         const std::string &getRecipientType() const;
     };
 
-    ///Ключ для получения доступа к API
-    /// \var api_key
+    /// Ключ для получения доступа к API
+    ///  \var api_key
     std::string api_key;
 
-    ///Название метода для получения информации об истории операций
-    /// \var method
+    /// Название метода для получения информации об истории операций
+    ///  \var method
     std::string method;
 
     /// Перечень типов операций, которые требуется отобразить
@@ -187,7 +188,7 @@ public:
     /// \param records Количество запрашиваемых записей истории операций
     Operation_history(std::string api_key, std::string method, std::string type = "",
                       std::string label = "", std::string from = "", std::string till = "",
-                      int start_record = 0, int records = 30);
+                      long start_record = 0, long records = 30);
 
     ///
     /// \return в виде строки Порядковый номер первой записи на следующей странице истории операций
@@ -195,5 +196,4 @@ public:
     ///
     /// \return вектор операций
     const std::vector<Operations> getOperations() const;
-
 };
