@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['process_5fpayment_210',['Process_payment',['../classProcess__payment.html#acde1d0af126811ecf9057e7db7192741',1,'Process_payment::Process_payment()=default'],['../classProcess__payment.html#ad29531c7abcfbb5216e99cd03d9a9dab',1,'Process_payment::Process_payment(std::string api_key, std::string method, std::string request_id)']]],
-  ['process_5fpayment_211',['process_payment',['../classApi.html#a06f00026f0f396eb2555bbaac0ca593d',1,'Api']]]
+  ['moneysourcenotavailable_214',['MoneySourceNotAvailable',['../classMoneySourceNotAvailable.html#ad09ddd6b784e17c61319889c2963b3cf',1,'MoneySourceNotAvailable']]]
 ];

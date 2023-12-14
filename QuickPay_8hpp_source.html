@@ -72,8 +72,8 @@ $(function() {
 <div class="contents">
 <a href="QuickPay_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;cpr/cpr.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classQuickPay.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuickPay.html">QuickPay</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classQuickPay.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQuickPay.html">QuickPay</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">    8</a></span>&#160;    <a class="code" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
@@ -86,21 +86,20 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    cpr::Url <a class="code" href="classQuickPay.html#a67efbace0ebbe3e15449432c6695bc0f">req</a>(std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                 std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay</a>(std::string <a class="code" href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">api_key</a>,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;             std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;             std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    cpr::Url <a class="code" href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">get_url</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="ttc" id="aclassQuickPay_html"><div class="ttname"><a href="classQuickPay.html">QuickPay</a></div><div class="ttdoc">Класс, создать форму для платежа</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00006">QuickPay.hpp:6</a></div></div>
-<div class="ttc" id="aclassQuickPay_html_a67efbace0ebbe3e15449432c6695bc0f"><div class="ttname"><a href="classQuickPay.html#a67efbace0ebbe3e15449432c6695bc0f">QuickPay::req</a></div><div class="ttdeci">cpr::Url req(std::string receiver, std::string sum)</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00016">QuickPay.cpp:16</a></div></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay</a>(std::string <a class="code" href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">api_key</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;             std::string <a class="code" href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">receiver</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;             std::string <a class="code" href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">sum</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    cpr::Url <a class="code" href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">get_url</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="ttc" id="aclassQuickPay_html"><div class="ttname"><a href="classQuickPay.html">QuickPay</a></div><div class="ttdoc">Класс, создать форму для платежа</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00005">QuickPay.hpp:6</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_a67efbace0ebbe3e15449432c6695bc0f"><div class="ttname"><a href="classQuickPay.html#a67efbace0ebbe3e15449432c6695bc0f">QuickPay::req</a></div><div class="ttdeci">cpr::Url req(std::string receiver, std::string sum)</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00018">QuickPay.cpp:18</a></div></div>
 <div class="ttc" id="aclassQuickPay_html_a816ea7282df6e529dbc4d4b5008cb6da"><div class="ttname"><a href="classQuickPay.html#a816ea7282df6e529dbc4d4b5008cb6da">QuickPay::sum</a></div><div class="ttdeci">std::string sum</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00020">QuickPay.hpp:20</a></div></div>
 <div class="ttc" id="aclassQuickPay_html_ab93188c9575735ef8c6ea5d7166d0128"><div class="ttname"><a href="classQuickPay.html#ab93188c9575735ef8c6ea5d7166d0128">QuickPay::receiver</a></div><div class="ttdeci">std::string receiver</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00016">QuickPay.hpp:16</a></div></div>
 <div class="ttc" id="aclassQuickPay_html_ad741f7dc34719dd2c51921a0e15274dd"><div class="ttname"><a href="classQuickPay.html#ad741f7dc34719dd2c51921a0e15274dd">QuickPay::QuickPay</a></div><div class="ttdeci">QuickPay()=default</div></div>
 <div class="ttc" id="aclassQuickPay_html_af2cd0f044622632f5ef7a828bd7101fe"><div class="ttname"><a href="classQuickPay.html#af2cd0f044622632f5ef7a828bd7101fe">QuickPay::api_key</a></div><div class="ttdeci">std::string api_key</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8hpp_source.html#l00012">QuickPay.hpp:12</a></div></div>
-<div class="ttc" id="aclassQuickPay_html_aff13305b878e6b22c621b6e753d9ca47"><div class="ttname"><a href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">QuickPay::get_url</a></div><div class="ttdeci">cpr::Url get_url()</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00012">QuickPay.cpp:12</a></div></div>
+<div class="ttc" id="aclassQuickPay_html_aff13305b878e6b22c621b6e753d9ca47"><div class="ttname"><a href="classQuickPay.html#aff13305b878e6b22c621b6e753d9ca47">QuickPay::get_url</a></div><div class="ttdeci">cpr::Url get_url()</div><div class="ttdef"><b>Definition:</b> <a href="QuickPay_8cpp_source.html#l00013">QuickPay.cpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
