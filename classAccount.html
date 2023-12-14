@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Класc для получение информации о состоянии счета пользователя.  
+<p>Класc, отвечающий за получение информации о состоянии счета пользователя.  
  <a href="classAccount.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Account_8hpp_source.html">Account.hpp</a>&gt;</code></p>
@@ -156,7 +156,7 @@ $(function() {
 <tr class="separator:a62220746caf2c3fa05d77e524756f65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класc для получение информации о состоянии счета пользователя. </p>
+<div class="textblock"><p>Класc, отвечающий за получение информации о состоянии счета пользователя. </p>
 
 <p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00007">7</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
@@ -210,9 +210,10 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Создает экземпляр класса <a class="el" href="classAccount.html" title="Класc для получение информации о состоянии счета пользователя.">Account</a> для получения информации об аккаунте </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Создает экземпляр класса <a class="el" href="classAccount.html" title="Класc, отвечающий за получение информации о состоянии счета пользователя.">Account</a>. Создание экземляра данного класса лучше оборачивать в блок try catch. <br  />
+Данный конструктор может вызвать исключение разлчиных типов. Например <a class="el" href="classInvalidToken.html" title="Дочерний класс от Exception. Сообщает о проблеме с токеном.">InvalidToken</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">api_key</td><td>API ключ для доступа к операции </td></tr>
+    <tr><td class="paramname">api_key</td><td>API ключ для доступа к операции. </td></tr>
     <tr><td class="paramname">method</td><td>Название метода в URL </td></tr>
   </table>
   </dd>
@@ -275,7 +276,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>номер счета пользователя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00086">86</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00089">89</a></p>
 
 </div>
 </div>
@@ -303,7 +304,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>статус пользователя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00102">102</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00105">105</a></p>
 
 </div>
 </div>
@@ -331,7 +332,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>тип счета пользователя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00098">98</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00101">101</a></p>
 
 </div>
 </div>
@@ -359,7 +360,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>cумму доступную для расходных операций </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00110">110</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00113">113</a></p>
 
 </div>
 </div>
@@ -387,7 +388,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>баланс счета пользователя. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00090">90</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00093">93</a></p>
 
 </div>
 </div>
@@ -415,7 +416,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>сумму заблокированных средств по решению исполнительных органов </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00118">118</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00121">121</a></p>
 
 </div>
 </div>
@@ -443,7 +444,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>код валюты счета пользователя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00094">94</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00097">97</a></p>
 
 </div>
 </div>
@@ -471,7 +472,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>сумму задолженности (отрицательного остатка на счете) </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00122">122</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00125">125</a></p>
 
 </div>
 </div>
@@ -499,7 +500,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>сумму стоящих в очереди пополнений </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00114">114</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00117">117</a></p>
 
 </div>
 </div>
@@ -527,7 +528,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>сумму замороженных средств </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00126">126</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00129">129</a></p>
 
 </div>
 </div>
@@ -555,7 +556,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>общий баланс счета </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00106">106</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00109">109</a></p>
 
 </div>
 </div>
@@ -772,7 +773,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00082">82</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Account_8hpp_source.html">Account.hpp</a> строка <a class="el" href="Account_8hpp_source.html#l00085">85</a></p>
 
 </div>
 </div>

@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Класс, позволяющий просматривать историю операций  
+<p>Класс, позволяющий просматривать историю операций.  
  <a href="classOperation__history.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a>&gt;</code></p>
@@ -81,7 +81,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOperation__history_1_1Operations.html">Operations</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, позволяющий хранить и работать с операциями  <a href="classOperation__history_1_1Operations.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс, позволяющий хранить и работать с операциями.  <a href="classOperation__history_1_1Operations.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -124,7 +124,7 @@ $(function() {
 <tr class="separator:a3e68b06b9c6e3e1ee07bbca3aa5fc570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класс, позволяющий просматривать историю операций </p>
+<div class="textblock"><p>Класс, позволяющий просматривать историю операций. </p>
 
 <p class="definition">См. определение в файле <a class="el" href="Operation__history_8hpp_source.html">Operation_history.hpp</a> строка <a class="el" href="Operation__history_8hpp_source.html#l00009">9</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
@@ -214,7 +214,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Создает экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Создает экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций.">Operation_history</a>. Создание экземляра данного класса лучше оборачивать в блок try catch. <br  />
+Данный конструктор может вызвать исключение разлчиных типов. Например <a class="el" href="classIllegalParamFromDate.html" title="Дочерний класс от Exception. Сообщает о проблеме с параметром from_date.">IllegalParamFromDate</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">api_key</td><td>API ключ для доступа </td></tr>
     <tr><td class="paramname">method</td><td>Название метода в URL </td></tr>

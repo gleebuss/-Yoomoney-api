@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Класс, позволяющий подтвердить ранее созданный платеж  
+<p>Класс, позволяющий подтвердить ранее созданный платеж.  
  <a href="classProcess__payment.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a>&gt;</code></p>
@@ -121,7 +121,7 @@ $(function() {
 <tr class="separator:a43cd420501026c6480adc682508e05ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>Класс, позволяющий подтвердить ранее созданный платеж </p>
+<div class="textblock"><p>Класс, позволяющий подтвердить ранее созданный платеж. </p>
 
 <p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00007">7</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
@@ -181,7 +181,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Создает экземпляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж">Process_payment</a>, нужен для подтверждения платежа </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Создает экземпляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж.">Process_payment</a>. Создание экземляра данного класса лучше оборачивать в блок try catch. <br  />
+Данный конструктор может вызвать исключение разлчиных типов. Например <a class="el" href="classIllegalParams.html" title="Дочерний класс от Exception. Сообщает о недопустимых значениях параметров платежа или об их отсутстви...">IllegalParams</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">api_key</td><td>API ключ для доступа к операции </td></tr>
     <tr><td class="paramname">method</td><td>Название метода в URL </td></tr>
@@ -219,7 +220,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>баланс счета пользователя после проведения платежа </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00076">76</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00079">79</a></p>
 
 </div>
 </div>
@@ -247,7 +248,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>сумма, поступившую на счет получателя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00090">90</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00093">93</a></p>
 
 </div>
 </div>
@@ -275,7 +276,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>номер счета получателя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00083">83</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00086">86</a></p>
 
 </div>
 </div>
@@ -303,7 +304,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>номер счета плательщика </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00069">69</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00072">72</a></p>
 
 </div>
 </div>
@@ -331,7 +332,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>идентификатор запроса </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00062">62</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00065">65</a></p>
 
 </div>
 </div>
@@ -359,7 +360,7 @@ $(function() {
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>код результата выполнения операции </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00055">55</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Process__payment_8hpp_source.html">Process_payment.hpp</a> строка <a class="el" href="Process__payment_8hpp_source.html#l00058">58</a></p>
 
 </div>
 </div>

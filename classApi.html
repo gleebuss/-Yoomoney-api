@@ -157,7 +157,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Создает объект API для дальнейшей работы </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Создает экземпляр класса <a class="el" href="classApi.html" title="Класс, отвечающий за доступ ко всему API Yoomoney.">Api</a> для дальнейшей работы. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">api_key</td><td>API ключ для доступа </td></tr>
   </table>
@@ -191,9 +191,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экземпляр класса <a class="el" href="classAccount.html" title="Класc для получение информации о состоянии счета пользователя.">Account</a> нужен для получения информации об аккаунте </p><dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classAccount.html" title="Класc для получение информации о состоянии счета пользователя.">Account</a> </dd></dl>
+<p>Данный метод создает экземпляр класса <a class="el" href="classAccount.html" title="Класc, отвечающий за получение информации о состоянии счета пользователя.">Account</a>. Вызов данного метода лучше оборачивать в блок try catch. <br  />
+Данный метод может вызвать исключение разлчиных типов. Например <a class="el" href="classInvalidToken.html" title="Дочерний класс от Exception. Сообщает о проблеме с токеном.">InvalidToken</a>. Исключения можно поймать с помощью std::exception. </p><dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classAccount.html" title="Класc, отвечающий за получение информации о состоянии счета пользователя.">Account</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00033">33</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00036">36</a></p>
 
 </div>
 </div>
@@ -230,16 +231,16 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экземпляр класса <a class="el" href="classQuickPay.html" title="Класс, создать форму для платежа">QuickPay</a> нужен для создания формы </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Данный метод создает экземпляр класса <a class="el" href="classQuickPay.html" title="Класс, отвечающий за создание формы для платежа.">QuickPay</a>. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">receiver</td><td>Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей </td></tr>
     <tr><td class="paramname">sum</td><td>Сумма перевода (спишется с отправителя) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classQuickPay.html" title="Класс, создать форму для платежа">QuickPay</a> </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classQuickPay.html" title="Класс, отвечающий за создание формы для платежа.">QuickPay</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00090">90</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00102">102</a></p>
 
 </div>
 </div>
@@ -300,7 +301,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> нужен для получения истории операции </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Данный метод создает экземпляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций.">Operation_history</a>. Вызов данного метода лучше оборачивать в блок try catch. <br  />
+Данный метод может вызвать исключение разлчиных типов. Например <a class="el" href="classIllegalParamFromDate.html" title="Дочерний класс от Exception. Сообщает о проблеме с параметром from_date.">IllegalParamFromDate</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Перечень типов операций, которые требуется отобразить </td></tr>
     <tr><td class="paramname">label</td><td>Отбор платежей по значению метки </td></tr>
@@ -311,9 +313,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций">Operation_history</a> </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classOperation__history.html" title="Класс, позволяющий просматривать историю операций.">Operation_history</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00047">47</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00053">53</a></p>
 
 </div>
 </div>
@@ -340,15 +342,16 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экземпляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж">Process_payment</a> нужен для подтверждения платежа </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Данный метод создает экземпляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж.">Process_payment</a>. Вызов данного метода лучше оборачивать в блок try catch. <br  />
+Данный метод может вызвать исключение разлчиных типов. Например <a class="el" href="classIllegalParams.html" title="Дочерний класс от Exception. Сообщает о недопустимых значениях параметров платежа или об их отсутстви...">IllegalParams</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">request_id</td><td>Идентификатор запроса, полученный из ответа метода request-payment. </td></tr>
+    <tr><td class="paramname">request_id</td><td>Идентификатор запроса, полученный из ответа метода request_payment. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж">Process_payment</a> </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classProcess__payment.html" title="Класс, позволяющий подтвердить ранее созданный платеж.">Process_payment</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00080">80</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00092">92</a></p>
 
 </div>
 </div>
@@ -403,7 +406,8 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Экземпляр класса <a class="el" href="classRequest__payment.html" title="Класс, позволяющий создать платеж">Request_payment</a> нужен для создания платежа </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>Данный метод создает экземпляр класса <a class="el" href="classRequest__payment.html" title="Класс, позволяющий создать платеж">Request_payment</a>. Вызов данного метода лучше оборачивать в блок try catch. <br  />
+Данный метод может вызвать исключение разлчиных типов. Например <a class="el" href="classLimitExceeded.html" title="Дочерний класс от Exception. Сообщает о превышении лимитов на операцию.">LimitExceeded</a>. Исключения можно поймать с помощью std::exception. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">to</td><td>Идентификатор получателя перевода </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма к оплате (столько заплатит отправитель) </td></tr>
@@ -415,7 +419,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>экзепляр класса <a class="el" href="classRequest__payment.html" title="Класс, позволяющий создать платеж">Request_payment</a> </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00062">62</a></p>
+<p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00071">71</a></p>
 
 </div>
 </div>
@@ -439,7 +443,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ключ для получения доступа к API </p>
+<p>Ключ для получения доступа к API. </p>
 
 <p class="definition">См. определение в файле <a class="el" href="Api_8hpp_source.html">Api.hpp</a> строка <a class="el" href="Api_8hpp_source.html#l00015">15</a></p>
 
