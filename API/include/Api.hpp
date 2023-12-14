@@ -10,7 +10,7 @@
 class Api
 {
 private:
-    /// Ключ для получения доступа к API
+    /// Ключ для получения доступа к API.
     ///  \var api_key
     std::string api_key;
 
@@ -21,14 +21,17 @@ private:
     Api() = default;
 
 public:
-    /// Создает объект API для дальнейшей работы
+    /// Создает экземпляр класса Api для дальнейшей работы.
     /// \param api_key API ключ для доступа
     Api(const std::string api_key)
     {
         this->api_key = api_key;
     };
 
-    /// Экземпляр класса Account нужен для получения информации об аккаунте
+    /// Данный метод создает экземпляр класса Account.
+    /// Вызов данного метода лучше оборачивать в блок try catch. \n
+    /// Данный метод может вызвать исключение разлчиных типов. Например InvalidToken.
+    /// Исключения можно поймать с помощью std::exception.
     /// \return экзепляр класса Account
     Account account_info()
     {
@@ -36,7 +39,10 @@ public:
         return Account(this->api_key, method);
     }
 
-    /// Экземпляр класса Operation_history нужен для получения истории операции
+    /// Данный метод создает экземпляр класса Operation_history.
+    /// Вызов данного метода лучше оборачивать в блок try catch. \n
+    /// Данный метод может вызвать исключение разлчиных типов. Например IllegalParamFromDate.
+    /// Исключения можно поймать с помощью std::exception.
     /// \param type Перечень типов операций, которые требуется отобразить
     /// \param label Отбор платежей по значению метки
     /// \param from Вывести операции от момента времени (операции, равные from, или более поздние)
@@ -52,7 +58,10 @@ public:
         return Operation_history(this->api_key, method, type, label, from, till, start_record, records);
     };
 
-    /// Экземпляр класса Request_payment нужен для создания платежа
+    /// Данный метод создает экземпляр класса Request_payment.
+    /// Вызов данного метода лучше оборачивать в блок try catch. \n
+    /// Данный метод может вызвать исключение разлчиных типов. Например LimitExceeded.
+    /// Исключения можно поймать с помощью std::exception.
     /// \param to Идентификатор получателя перевода
     /// \param amount Сумма к оплате (столько заплатит отправитель)
     /// \param comment Комментарий к переводу, отображается в истории отправителя
@@ -74,8 +83,11 @@ public:
                                label);
     };
 
-    /// Экземпляр класса Process_payment нужен для подтверждения платежа
-    /// \param request_id Идентификатор запроса, полученный из ответа метода request-payment.
+    /// Данный метод создает экземпляр класса Process_payment.
+    /// Вызов данного метода лучше оборачивать в блок try catch. \n
+    /// Данный метод может вызвать исключение разлчиных типов. Например IllegalParams.
+    /// Исключения можно поймать с помощью std::exception.
+    /// \param request_id Идентификатор запроса, полученный из ответа метода request_payment.
     /// \return экзепляр класса Process_payment
     Process_payment process_payment(std::string request_id)
     {
@@ -83,7 +95,7 @@ public:
         return Process_payment(this->api_key, method, request_id);
     }
 
-    /// Экземпляр класса QuickPay нужен для создания формы
+    /// Данный метод создает экземпляр класса QuickPay.
     /// \param receiver Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей
     /// \param sum Сумма перевода (спишется с отправителя)
     /// \return экзепляр класса QuickPay

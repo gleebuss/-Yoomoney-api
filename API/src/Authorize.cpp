@@ -1,9 +1,5 @@
 #include "Authorize.hpp"
 
-/// Позволяет получить Api ключ для дальнейшей работы
-/// \param client_id - Идентификатор приложения, полученный при регистрации,
-/// \param redirect_uri - URI, на который OAuth-сервер передает результат авторизации,
-/// \param client_secret - Секретное слово для проверки подлинности приложения.
 Authorize::Authorize(std::string client_id, std::string redirect_uri, std::string client_secret)
 {
     // первый этап получения токена

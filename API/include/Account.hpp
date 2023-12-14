@@ -2,7 +2,7 @@
 #include "dependencies/json.hpp"
 
 /// \class Account
-/// \brief Класc для получение информации о состоянии счета пользователя.
+/// \brief Класc, отвечающий за получение информации о состоянии счета пользователя.
 ///
 class Account
 {
@@ -74,8 +74,11 @@ private:
     std::string bool_to_str(bool flag);
 
 public:
-    /// Создает экземпляр класса Account для получения информации об аккаунте
-    /// \param api_key API ключ для доступа к операции
+    /// Создает экземпляр класса Account. 
+    /// Создание экземляра данного класса лучше оборачивать в блок try catch. \n
+    /// Данный конструктор может вызвать исключение разлчиных типов. Например InvalidToken.
+    /// Исключения можно поймать с помощью std::exception.
+    /// \param api_key API ключ для доступа к операции.
     /// \param method Название метода в URL
     Account(std::string api_key, std::string method);
 

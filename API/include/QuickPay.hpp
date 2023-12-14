@@ -1,7 +1,7 @@
 #include "cpr/cpr.h"
 
 /// \class QuickPay
-/// \brief Класс, создать форму для платежа
+/// \brief Класс, отвечающий за создание формы для платежа.
 class QuickPay
 {
 private:
@@ -23,7 +23,7 @@ private:
                  std::string sum);
 
 public:
-    /// Создает экземпляр класса QuickPay для получения URL формы
+    /// Создает экземпляр класса QuickPay.
     /// \param api_key API ключ для доступа к операции
     /// \param receiver Номер кошелька ЮMoney, на который нужно зачислять деньги отправителей
     /// \param sum Сумма перевода

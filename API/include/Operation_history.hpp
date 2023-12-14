@@ -4,13 +4,13 @@
 #include <iostream>
 
 /// \class Operation_history
-/// \brief Класс, позволяющий просматривать историю операций
+/// \brief Класс, позволяющий просматривать историю операций.
 
 class Operation_history
 {
 private:
     /// \class Operations
-    /// \brief Класс, позволяющий хранить и работать с операциями
+    /// \brief Класс, позволяющий хранить и работать с операциями.
     class Operations
     {
         friend class Operation_history;
@@ -177,7 +177,10 @@ private:
     nlohmann::json req();
 
 public:
-    /// Создает экземпляр класса Operation_history
+    /// Создает экземпляр класса Operation_history.
+    /// Создание экземляра данного класса лучше оборачивать в блок try catch. \n
+    /// Данный конструктор может вызвать исключение разлчиных типов. Например IllegalParamFromDate.
+    /// Исключения можно поймать с помощью std::exception.
     /// \param api_key API ключ для доступа
     /// \param method Название метода в URL
     /// \param type Перечень типов операций, которые требуется отобразить

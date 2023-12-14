@@ -1,5 +1,5 @@
 /// \class Exception
-/// \brief Дочерний класс от std::exception для вызова разных исключений
+/// \brief Дочерний класс от std::exception.
 class Exception : public std::exception
 {
 public:
@@ -17,7 +17,7 @@ private:
 };
 
 /// \class InvalidToken
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с токеном
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с токеном.
 class InvalidToken : public Exception
 {
 public:
@@ -25,7 +25,7 @@ public:
 };
 
 /// \class IllegalParamType
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром type
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром type.
 class IllegalParamType : public Exception
 {
 public:
@@ -33,7 +33,7 @@ public:
 };
 
 /// \class IllegalParamStartRecord
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром start_record
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром start_record.
 class IllegalParamStartRecord : public Exception
 {
 public:
@@ -41,7 +41,7 @@ public:
 };
 
 /// \class IllegalParamRecords
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром records
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром records.
 class IllegalParamRecords : public Exception
 {
 public:
@@ -49,7 +49,7 @@ public:
 };
 
 /// \class IllegalParamLabel
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром label
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром label.
 class IllegalParamLabel : public Exception
 {
 public:
@@ -57,7 +57,7 @@ public:
 };
 
 /// \class IllegalParamFromDate
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром from_date
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром from_date.
 class IllegalParamFromDate : public Exception
 {
 public:
@@ -65,7 +65,7 @@ public:
 };
 
 /// \class IllegalParamTillDate
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о проблеме с параметром till_date
+/// \brief Дочерний класс от Exception. Сообщает о проблеме с параметром till_date.
 class IllegalParamTillDate : public Exception
 {
 public:
@@ -73,25 +73,31 @@ public:
 };
 
 /// \class Technical
-/// \brief Дочерний класс от Exception для вызова исключения. Сообщает о технический проблемах
+/// \brief Дочерний класс от Exception. Сообщает о технических проблемах.
 class Technical : public Exception
 {
 public:
     Technical() : Exception("Техническая проблема"){};
 };
 
+/// \class IllegalParams
+/// \brief Дочерний класс от Exception. Сообщает о недопустимых значениях параметров платежа или об их отсутствии.
 class IllegalParams : public Exception
 {
 public:
     IllegalParams(std::string msg) : Exception(msg){};
 };
 
+/// \class LimitExceeded
+/// \brief Дочерний класс от Exception. Сообщает о превышении лимитов на операцию.
 class LimitExceeded : public Exception
 {
 public:
     LimitExceeded() : Exception("Превышен один из лимитов на операции: на сумму операции для выданного токена авторизации; сумму операции за период времени для выданного токена авторизации; ограничения ЮMoney для различных видов операций"){};
 };
 
+/// \class MoneySourceNotAvailable
+/// \brief Дочерний класс от Exception. Сообщает, что метод платежа недоступен для данного платежа.
 class MoneySourceNotAvailable : public Exception
 {
 public:

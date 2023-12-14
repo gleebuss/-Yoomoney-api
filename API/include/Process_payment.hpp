@@ -3,7 +3,7 @@
 #include "iostream"
 
 /// \class Process_payment
-/// \brief Класс, позволяющий подтвердить ранее созданный платеж
+/// \brief Класс, позволяющий подтвердить ранее созданный платеж.
 class Process_payment
 {
 private:
@@ -44,7 +44,10 @@ private:
     nlohmann::json req();
 
 public:
-    /// Создает экземпляр класса Process_payment, нужен для подтверждения платежа
+    /// Создает экземпляр класса Process_payment.
+    /// Создание экземляра данного класса лучше оборачивать в блок try catch. \n
+    /// Данный конструктор может вызвать исключение разлчиных типов. Например IllegalParams.
+    /// Исключения можно поймать с помощью std::exception.
     /// \param api_key API ключ для доступа к операции
     /// \param method Название метода в URL
     /// \param request_id Идентификатор запроса
