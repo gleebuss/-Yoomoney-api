@@ -21,8 +21,14 @@ Process_payment::Process_payment(std::string api_key, std::string method,
     {
         if (data.contains("error_description"))
             throw IllegalParams(data["error_description"]);
-        if (data.contains("error"))
-            throw MoneySourceNotAvailable();
+        else
+        {
+            std::string error = data["error"];
+            if (error == "technical_error")
+                throw Technical();
+            if (error == "money_source_not_available")
+                throw MoneySourceNotAvailable();
+        }
     }
 }
 

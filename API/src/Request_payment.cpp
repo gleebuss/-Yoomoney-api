@@ -49,7 +49,15 @@ Request_payment::Request_payment(std::string api_key, std::string method,
     {
         if (data.contains("error_description"))
             throw IllegalParams(data["error_description"]);
-        if (data.contains("error"))
-            throw LimitExceeded();
+        else
+        {
+            std::string error = data["error"];
+            if (error == "limit_exceeded")
+                throw LimitExceeded();
+            if (error == "technical_error")
+                throw Technical();
+            if (error == "not_enough_funds")
+                throw NotEnoughFunds();
+        }
     }
 }

@@ -103,3 +103,11 @@ class MoneySourceNotAvailable : public Exception
 public:
     MoneySourceNotAvailable() : Exception("Запрошенный метод платежа (money_source) недоступен для данного платежа."){};
 };
+
+/// \class NotEnoughFunds
+/// \brief Дочерний класс от Exception. Сообщает, что недостаточно средств на счете плательщика.
+class NotEnoughFunds : public Exception
+{
+public:
+    NotEnoughFunds() : Exception("Недостаточно средств на счете плательщика. Необходимо пополнить счет и провести новый платеж."){};
+};
